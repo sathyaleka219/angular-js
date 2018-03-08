@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menu</title>
+        <script src="angular.min.js"></script>
+        <script>
+        angular.module('Myapp',[]).
+        service('Menuitems',function(){
+           this.item=[ {"food":"IDLY","price" : "30"},
+                 {"food":"CHAPPATHI", "price" : "60"},
+                 {"food":"DOSA" , "price":"65"},
+                 {"food":"BRIYANI","price" : "120"}];
+    
+        }).controller('one',function($scope,Menuitems){
+             $scope.items=Menuitems.item;
+                     });
+                 
+        </script>
+    </head>
+    <body>
+        <div ng-app="Myapp" ng-controller="one">
+           <ul ng-repeat="item in items">
+               <li style="border:1px solid black">{{item.food}}:{{item.price}}</li>
+           </ul> 
+              Quantity: <input type="number" ng-model="quantity"/> X Price:<input type="number" ng-model="price"/>
+              =<span>Total:{{quantity * price}}</span>
+        </div>
+    </body>
+</html>

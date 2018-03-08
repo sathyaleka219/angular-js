@@ -1,0 +1,32 @@
+<html>
+<body>
+<script src="angular.min.js"></script>
+<div ng-app>
+  coldcoffee<button ng-click="count = count + 1" ng-init="count=0">+
+  </button>{{count}}
+   <button ng-click="count = count - 1" ng-init="count=0">-
+   </button>
+   price{{d}}<div ng-app="" ng-init="d='80'">
+   <br><br>
+  
+  
+  orea milkshake<button ng-click="count1 = count1 + 1" ng-init="count1=0">+
+  </button>{{count1}}
+   <button ng-click="count1 = count1 - 1" ng-init="count1=0">-
+   </button>
+   price{{e}}<div ng-app="" ng-init="e='120'">
+   <br><br>
+ 
+ 
+ chocomilkshake<button ng-click="count2 = count2 + 1" ng-init="count2=0">+
+ </button>{{count2}}
+   <button ng-click="count2 = count2 - 1" ng-init="count2=0">-
+   </button> 
+   price{{f}}<div ng-app="" ng-init="f='100'">
+   <br><br>
+  
+  
+  total:{{ count*d + count1*e+ count2 *f}}
+</div>
+</body>
+</html>
